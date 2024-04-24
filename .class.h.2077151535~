@@ -1,0 +1,104 @@
+#include <iostream>
+#include <string>
+
+
+#ifndef CLASS_H
+#define CLASS_H
+
+using namespace std;
+
+class Team 
+{
+  private:
+    string name;
+    string coachName;
+    string homeCity;
+    bool homeStatus; 
+    int score;
+    int timeOuts;
+  public:
+      Team() //default constructor 
+      {
+        name = "Default Team Name";
+        coachName = "DefaultCoachName";
+        homeCity = "DefaultCity";
+        homeStatus = false; // false = home, true = away
+        score = 0;
+        timeOuts = 0;
+      }
+//SETTERS
+      void setTeamName(string tN) { name = tN; }
+      void setCoachName(string cN) { coachName = cN; }
+      void setHomeCity(string hC) { homeCity = hC; }
+      void setHomeStatus(bool hS) { homeStatus = hS; }    
+      void setScore(int s) { score = s; }  
+      void setTimeOuts(int tO) { timeOuts = tO; }
+
+//GETTERS
+      string getName() const { return name; }
+      string getCoachName() const { return coachName; }
+      string getHomeCity() const { return homeCity; }
+      bool getHomeStatus() const { return homeStatus; }  
+      int getScore() const { return score; }
+      int getTimeOuts() const { return timeOuts; }
+
+};
+class Scoreboard
+{
+  private:
+    int down;
+    int toGo;
+    int quarter;
+    int homeScore;
+    int awayScore;
+    bool possession;
+    int sec;
+    int min;
+
+    Team home;
+    Team visitor;
+
+  public: 
+    Scoreboard()
+    {
+    down = 0;
+    toGo = 0;
+    quarter = 1;
+    homeScore = 0;
+    awayScore = 0;
+    possession = false;
+    sec = 0;
+    min = 0;
+
+
+
+    home = Team();
+   visitor = Team(); 
+    }  
+//SETTERS
+    void setDown(int d) { down = d; }
+    void setToGo(int tG) { toGo = tG; }
+    void setQuarter(int q) { quarter = q; }  
+    void setHomeScore(int hS) { homeScore = hS; }
+    void setAwayScore(int aS) { awayScore = aS; }  
+    void setPossession(bool p) { possession = p; }
+    void setSec(int s) { sec = s; }  
+    void setMin(int m) { min = m; }
+
+    void setHome (Team hSet) {home = hSet;}
+    void setVisitor (Team vSet) {visitor = vSet;}
+
+//GETTERS
+    int getDown() const { return down; }
+    int getToGo() const { return toGo; }
+    int getQuarter() const { return quarter; }
+    int getHomeScore() const { return homeScore; }
+    int getAwayScore() const { return awayScore; }
+    bool getPossession() const { return possession; }
+    int getSec() const { return sec; }
+    int getMin() const { return min; }
+
+    Team getHome() const { return home; }
+    Team getVisitor() const { return visitor; }
+
+    void showScoreboard()
