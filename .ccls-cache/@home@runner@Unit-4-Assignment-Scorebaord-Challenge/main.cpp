@@ -1,8 +1,10 @@
-//LIZ BELL
-//04-20-2024
-//A Football Scoreboard using Object Oriented Programming in C++\
-//see class.h for my attempts at making the timer work 
-
+/*  LIZ BELL
+April 1, 2024
+Dr. McMillan, Tarrant County College
+COSC 1437-58000, Programming Fundamentals II
+The purpose of this program is to present the user with a scoreboard that they have total capability to update/customize.
+This assignment helped me learn how to use the vector class and how to use the push_back function.
+*/
 
 #include <iostream>
 #include <string> 
